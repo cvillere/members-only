@@ -1,5 +1,7 @@
 # README
 
+This is the README for my members only project for Odin Project
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

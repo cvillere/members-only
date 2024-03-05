@@ -7,10 +7,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new
+    @post = Post.new(post_params)
 
     if @post.save
-      render :index
+      redirect_to posts_url
     else
       render :new, status: :unprocessable_entity
     end
@@ -18,6 +18,12 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:author, :title, :body)
   end
 
 end

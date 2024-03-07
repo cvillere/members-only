@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      redirect_to posts_url
+      redirect_to posts_path
     else
       render :new, status: :unprocessable_entity
     end

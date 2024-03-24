@@ -4,7 +4,8 @@
 
 <ul>
   <% @posts.each do |post| %>
-    <li><%= post.author %></li> 
+    <li><%= post %></li> 
+    <li><%= post.author if @user.online? %></li> 
     <li><%= post.title %></li>
     <li><%= post.body %></li>
   <% end %>

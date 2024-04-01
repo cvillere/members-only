@@ -5,7 +5,7 @@
 <ul>
   <% @posts.each do |post| %>
     <li><%= post %></li> 
-    <li><%= post.author if @user.online? %></li> 
+    <li><%= post.author if user_signed_in? %></li> 
     <li><%= post.title %></li>
     <li><%= post.body %></li>
   <% end %>

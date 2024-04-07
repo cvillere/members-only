@@ -6,8 +6,5 @@ class User < ApplicationRecord
 
   has_many :posts
 
-  def online?
-    updated_at > 1.minutes.ago
-  end
   
 end
